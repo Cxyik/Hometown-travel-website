@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <META http-equiv=Page-Enter content=blendTrans(duration=0.5)>
+    <META http-equiv=Page-Exit content=blendTrans(duration=0.5)>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>酉阳旅游</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="order by " />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/thrid.css">
+    <link rel="stylesheet" href="./css/first.css">
+    <link rel="stylesheet" href="./css/second.css">
+    <link rel="stylesheet" href="./css/fourth.css">
+    <link rel="stylesheet" href="./css/sixth.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=u9XSyN5tqMocZz4AkCKbhAMfoMOGVV2o"></script>
+  </head>
+
+  <body>
+      <div class="m-menu">
+        <div class="m-log">
+          <img src="./image/old/3.png" alt="">
+        </div>
+        <div class="m-dh">
+          <div class="m-li1" onclick="homefunction()">首页</div>
+          <div class="m-li2" onclick="taoyuan()">桃源信息</div>
+          <div class="m-li3" onclick="shanshuiyuan()">酉阳美食</div>
+          <div class="m-li4" onclick="knowledge()">桃源导航</div>
+          <div class="m-li5" onclick="mapp()">位置信息</div>
+          <div class="m-li6" onclick="supermarket()">酉阳优选</div>
+          <div class="cdmenu">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+            <div id="c4"></div>
+            <div id="c5"></div>
+            <div id="c6"></div>
+          </div>
+          
+          <div class="m-login">
+            <img src="./image/old/wxchat.png" alt="" class="login" onclick="wxlog()">
+            <img src="./image/old/qq.png" alt="" class="login1" onclick="qqlog()">
+          </div>
+        </div>
+        <div class="m-zs">
+          <img src="./image/old/xz.png" id="ok1" class="ok">
+        </div>
+        <div class="m-zp">
+          <img src="./image/old/xz.png" id="ok2" class="ok">
+        </div>
+        <div class="m-zq">
+          <img src="./image/old/xz.png" id="ok3" class="ok">
+        </div>
+        <div class="m-zr">
+          <img src="./image/old/xz.png" id="ok4" class="ok">
+        </div>
+        <div class="m-zk">
+          <img src="./image/old/xz.png" id="ok5" class="ok">
+        </div>
+        <div class="m-zu">
+          <img src="./image/old/xz.png" id="ok6" class="ok">
+        </div>
+        <div class="m-theme">
+          <div class="demo">
+            <!-- 创建图片存储容器 -->
+            <div class="demo1">
+              <!-- 引入轮播图图片 -->
+              <img src="./image/index1/pro1.jpg" alt=""/>
+              <img src="./image/index1/pro2.jpg" alt=""/>
+              <img src="./image/index1/pro3.jpg" alt=""/>
+              <img src="./image/index1/pro6.jpg" alt=""/>
+              <img src="./image/index1/pro5.jpg" alt=""/>
+            </div>
+          </div>
+          <div class="m-thle">
+            <div class="top">
+              <div class="top-left">
+                <div class="img0">
+                  <img src="./image/index1/show1.jpg" alt="">
+                </div>
+                <div class="introduce0">
+                  <span>美食住宿</span>
+                  <span>VAVATION</span>
+                </div>
+                <div class="intro0">
+                  <span>美在美味鲜，乐在乐鱼湾。看青山绿水，品山珍海味。山珍野味美，清心不疲惫。乐鱼湾，回归如鱼得水的自然惬意。</span>
+                </div>
+                <div class="fg">
+                  <img src="./image/index1/fg.png" alt="">
+                </div>
+              </div>
+              <div class="top-right">
+                <div class="img1">
+                  <img src="./image/index1/show2.jpg" alt="">
+                </div>
+                <div class="introduce1">
+                  <span>休闲度假</span>
+                  <span>VAVATION</span>
+                </div>
+                <div class="intro1">
+                  <span>糊口本来清淡如水，味道如何看你如何调配。放点盐，味道变咸；放点糖，味道变甜；放点茶，味道是香；放点咖啡，味道便苦。结果如何，由你来抉择！</span>
+                </div>
+                <div class="fg0">
+                  <img src="./image/index1/fg.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <span>风光美景</span>
+              <span>Land Scape</span>
+              <div class="vis">
+                <img src="./image/index1/vis0.jpg" class="viss">
+                <img src="./image/index1/vis1.jpg" alt="">
+                <img src="./image/index1/vis4.jpg" alt="">
+                <img src="./image/index1/vis3.jpg" alt="">
+              </div>
+              <div class="intrthis">
+                <span>原始森林</span>
+                <span>哥达斯之家</span>
+                <span>避暑山庄</span>
+                <span>枫叶林</span>
+              </div>
+            </div>
+            
+          </div>
+          <div class="m-thri">
+            <div class="ritop">
+              <div class="topmenu">
+                <span>新闻动态</span>
+                <span>News</span>
+                <span>MORE</span>
+                <img src="./image/index1/more.png" alt="">
+              </div>
+              <div class="rfg"></div>
+              <div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="ricenter">
+              <div class="topmenu1">
+                <span>旅游线路</span>
+                <span>Tourism</span>
+                <span>MORE</span>
+                <img src="./image/index1/more.png" alt="">
+              </div>
+              <div class="rfg"></div>
+              <div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="ribottom">
+              <div class="topmenu2">
+                <span>交通指引</span>
+                <span>Traffic</span>
+                <span>MORE</span>
+                <img src="./image/index1/more.png" alt="">
+              </div>
+              <div class="rfg"></div>
+              <div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+                <div class="tk">
+                  <div class="li"></div>
+                  <span>重庆酉阳欢迎您!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 结束放此处 -->
+          <div class="iend">
+            
+          </div>
+        </div>
+
+        <div class="m-end">
+          <div class="lf">
+            <div class="lf-top">
+              <a href="">联系我们</a>
+              <span>|</span>
+              <a href="">网站地图</a>
+              <span>|</span>
+              <a href="">版权声明</a>
+            </div>
+            <div class="f-info-p">
+              <span>版权所有：重庆市文化和旅游发展委员会</span>
+            </div>
+            <div class="f-info-p">
+              <span>主办：重庆市文化和旅游发展委员会</span>
+            </div>
+            <div class="f-info-p">
+              <a href="">渝ICP备19008933号</a>
+              <span>政府网站标识码 5000000091</span>
+            </div>
+          </div>
+          <div class="llf">
+            <div class="zw"></div>
+            <div class="f-info-p">
+              <span>办公电话：023-67705583（09:00—18:00） 023-67705389（18:00—次日09:00）</span>
+            </div>
+            <div class="f-info-p">
+              <span>咨询投诉热线：023-12345</span>
+            </div>
+            <div class="f-info-p">
+              <span>地址：重庆市两江新区黄山大道中段68号高科山顶总部基地41栋邮编：401123</span>
+            </div>
+          </div>
+          <div class="ewm">
+            <img src="./image/index1/left.png" alt="">
+            <img src="./image/index1/right.png" alt="">
+          </div>
+        </div>
+      </div>
+
+<!-- 登录 -->
+
+
+      <div class="wxlog">
+        <div class="closeqq" onclick="closelog()">
+            <img src="./image/index/close.jpg" alt="">
+        </div>
+        <div class="wxma">
+          <img src="./image/index/wxlog.jpg" alt="">
+          <div class="wxlogs">
+            请使用微信扫码登录
+          </div>
+        </div>
+      </div>
+      <div class="qqlog">
+        <div class="closeqq" onclick="closelog()">
+            <img src="./image/index/close.jpg" alt="">
+        </div>
+        <div class="qqma">
+          <img src="./image/index/qqlog.jpg" alt="">
+          <div class="wxlogs">
+            请使用QQ扫码登录
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- 由此开始 -->
+      <div class="m-container">
+        <div class="m-first">
+          
+        </div>
+
+
+        <div class="m-second">
+
+          <div class="welcome">
+            <img src="./image/index/welcome.png" alt="">
+          </div>
+          <div class="secimg">
+            <img src="./image/index/1.jpg" alt="">
+          </div>
+          
+          <div class="secmenu">
+            <div class="ssmenu1" onclick="change1()">古城酉阳</div>
+            <div class="ssmenu2" onclick="change2()">历史沿革</div>
+            <div class="ssmenu3" onclick="change3()">宗教文化</div>
+            <div class="ssmenu4" onclick="change4()">民族风俗</div>
+          </div>
+          <div class="ssecond">
+            <div class="gcyy">
+              <div class="gcyyimg">
+                <img src="./image/old/7.jpg" alt="">
+              </div>
+              <div class="gcyytop">
+                <span></span>
+                酉阳土家族苗族自治县位于重庆市东南部，地处武陵山区腹地，是出渝达鄂、湘、黔的重要门户，素有“渝东南门户、湘黔咽喉”之称。酉阳县东邻湖南省龙山县，南与秀山土家族苗族自治县、贵州省松桃苗族自治县、印江土家族苗族自治县接壤，西与贵州沿河土家族自治县隔江相望，西北与彭水苗族土家族自治县，正北与黔江区、湖北省咸丰、来凤县相连。至2017年底，酉阳县幅员面积5173平方公里 ，辖39个乡镇；以土家族、苗族为主，另有汉族、回族、蒙古族等民
+              </div>
+              <div class="xutop">
+                <div>族，共18个民族。根据第七次全国人口普查结果，截至2020年11月1日零时，酉阳土家族苗族自治县常住人口人。</div>
+                <div class="kkk">
+                  <span></span>
+                  2020年，累计完成固定资产投资532亿元，年均增长9.2%。全体居民人均可支配收入达到18374元，是2015年的1.6倍，年均增长10.5%。存款余额261.3亿元，比2015年增长56.8%，年均增长9.4%。酉州古城位于重庆市酉阳县县城桃花源景区，一条全长1.3公里的民族风情街，名武陵古州，现名酉阳古城，主要以土家族苗族文化为载体，集土家族苗族建筑、民俗风情于一体，是游人领略渝东南土家族苗族文化的窗口，品味渝东南民俗文化。古城由全长1300米民族风情街组成，名武陵古州，现名酉阳古城·依山而建，是一座展示土家族建筑、历史、民俗、文化的“博物馆”。酉州古城主要以土家族、苗族文化为载体，集土家族苗族建筑、民俗风情于一体，是游人领略武陵山土家族苗族文化的窗口，品味渝东南民俗文化。 古城始建于明洪武年间，是酉阳第12代土司冉兴邦修建的土司衙门。后经10余世土司的传承修缮，一度成为渝、鄂、湘、黔结合部政治、经济、文化的中心。随着清雍正十三年酉阳土司“改土归流”，古城慢慢荒废没落。
+                </div>
+              </div>
+            </div>
+            <div class="lsyg">
+              <div class="lsygg">
+                <img src="./image/old/yy.jpg" alt="">
+              </div>
+
+              <div class="lsygtop">
+                <span></span>
+                酉阳之地，古为《禹贡》梁、荆二州接壤之域。春秋为巴、楚两国交界之地。秦属黔中郡，汉为酉阳县地，三国属蜀汉，晋分属武陵郡及涪陵郡。唐属务州、思州地。五代后，为当地氏族所据，称酉阳寨。北宋属思州。南宋为冉氏土官地。元为酉阳州治，后升为酉阳宣慰司。明为酉阳宣抚司治。清置酉阳直隶州。清雍正十三年（1735年）“改土归流”，酉阳设直隶州，辖酉、秀、黔、彭四县。民国二年（1913年）酉阳废州为县，属川东道。民国二十四年（1935年），属第八行政督察区。中华人民共和国成立后，于1949年11月，设酉阳专区，辖酉、秀、黔三县。1952年9月，撤销酉阳专区，三县划归涪陵专区。1983年11月，成立酉阳土家族苗族自治县。1988年5月，划归黔江地区。2000年7月，黔江撤地区建区，酉阳自治县划归重庆市直辖。 2020年2月，酉阳县退出国家扶贫开发工作重点县。
+              </div>
+            </div>
+            <div class="zjwh">
+              <div class="thy">
+                <img src="./image/old/thy.jpg" alt="">
+              </div>
+              <div class="thys">
+                <span></span>
+                据传，土家面具阳戏源于殷商时期土家族图腾崇拜的傩祭，是一种集祭祀礼仪与戏剧艺术于一体的民间戏剧，被学者誉为中国戏剧的“活化石”。它与土家族群众日常生产和民俗生活联系紧密，具有显著的文化地域性与特殊性。演员们皆为当地土家族群众，他们“农忙务农、农闲从艺”，长期活动于当地镇乡村寨及院坝街市，在婚庆嫁娶、祈求吉祥、节庆祭祀、集会庆典上时常会出现他们的身影。
+              </div>
+              <div class="thys0">
+                <span></span>
+                “文化是民族生存和发展的重要力量，非物质文化遗产更是具有独特性和不可复制的文化资源，加强和提高非物质文化遗产的保护和传承，将更加有利于提升我们的文化自信。”酉阳县民族宗教委员会相关负责人表示，加强和提高非物质文化遗产的保护和传承，是彰显民族文化自信，实现文化振兴乡村的必由之路。为了发挥好文化在乡村振兴中的作用，加强和提高非物质文化遗产的保护和传承，让民族文化凝聚人心、教化群众、淳化民风。
+              </div>
+              <div class="thy0">
+                <img src="./image/old/thy0.jpg" alt="">
+              </div>
+            </div>
+            <div class="mzfs">
+              <div class="mzff">
+                <img src="./image/index/mz1.jpg" alt="">
+              </div>
+              <div class="mz1">
+                <span></span>
+                迎亲即迎娶新娘子，迎亲队伍敲锣打鼓和吹唢呐，在离女方家寨子不到500米远的地方点燃鞭炮，以提醒女方家做好准备。来到女方家，押礼官和女方的家族代表一起烧纸钱，以祭祀女方祖先。事毕，女方族长宣布“起嫁”，新郎立即进入女方家中堂，新娘子哥哥或弟弟从小屋里背新娘到中堂，一起进行祖宗告别仪式，然后，新娘子哥哥或者弟弟将新娘背出大门，亲手交给新郎官。新娘为了感谢哥哥或者弟弟，还要给他们发红包。新娘由其哥弟背出坐上轿子，意即新娘不带走娘家尘土，干干净净出门。待新娘坐上轿子后，在锣鼓唢呐声中起轿上路。
+              </div>
+              <div class="mz2">
+                <span></span>
+                花灯，又名灯笼。灯笼是起源于中国的一种汉族传统民俗工艺品 [1]  ，在古代，其主要作用是照明，由纸或者绢作为灯笼的外皮，骨架通常使用竹或木条制作，中间放上蜡烛或者灯泡，成为照明工具。受汉文化影响，在亚洲华人地区，许多国家的庙宇中，灯笼也是相当常见的物品。
+              </div>
+              <div class="mz22">
+                <img src="./image/index/mz2.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+        <!-- third -->
+        <div class="m-third">
+          
+          <ul class="home11">
+            <li>
+              <a href="">
+                <h3>酉阳火锅</h3>
+                <p>所有的意识生物都是不朽的精神生命，这其中包括人类。艾罗称为‘现在—成为者’，因为，一个不朽的生命最初的天性，是生活在永恒的状态 ——‘现在’，而唯一使他们如此存在的理由，是他们决定去——‘成为’。</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h3>酉阳水果</h3>
+                <p>“同领地”是一支种族或一种文明世界的名称。这个文明社会管理着数量庞大的星系、恒星、行星、卫星和陨石群，所掌控范围遍及了整个有形宇宙的四分之一！她所在的机构正在进行的任务，是“保护、控制和扩展同领地的版图与资源”。</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h3>酉阳披萨</h3>
+                <p>辽阔的空间区域设有电子强制滤网，电子强制滤网被设计用于探测现在-成为者的存在，并且阻止他们离开原来的区域。如果有哪个现在-成为者想试图穿过这个“强制滤网”，那么，它将在一种“电子网络”中将其捕获。他们每个人都被数十亿的电压处理，使记忆缺失，并用一些虚假的图像和催眠指令替换了他们原有的记忆，然后发送到地球上寄居在那些生物的躯体中。</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h3>酉阳菜</h3>
+                <p>一个现在-成为者将无法逃脱牢笼，因为他们无法回忆起自己是谁，曾来自何方，以及现在的处境。除了他们自己真实的经历之外，早已经被催眠去认为他们是某个人，在某件事中，某个时候和某个地方。因此，在这整个一大片的太空区域，地球已经变成了一个通用的倾倒垃圾的场所。地球本身是一个高度不稳定的行星。</p>
+              </a>
+          </li>
+        </ul>
+        
+        <div class="foodhome1"> 
+          <li>
+              <a href="">
+                <h3>酉阳蜂蜜</h3>
+                <p>所有的意识生物都是不朽的精神生命，这其中包括人类。艾罗称为‘现在—成为者’，因为，一个不朽的生命最初的天性，是生活在永恒的状态 ——‘现在’，而唯一使他们如此存在的理由，是他们决定去——‘成为’。</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h3>酉阳冰淇淋</h3>
+                <p>“同领地”是一支种族或一种文明世界的名称。这个文明社会管理着数量庞大的星系、恒星、行星、卫星和陨石群，所掌控范围遍及了整个有形宇宙的四分之一！她所在的机构正在进行的任务，是“保护、控制和扩展同领地的版图与资源”。</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h3>酉阳冷饮</h3>
+                <p>辽阔的空间区域设有电子强制滤网，电子强制滤网被设计用于探测现在-成为者的存在，并且阻止他们离开原来的区域。如果有哪个现在-成为者想试图穿过这个“强制滤网”，那么，它将在一种“电子网络”中将其捕获。他们每个人都被数十亿的电压处理，使记忆缺失，并用一些虚假的图像和催眠指令替换了他们原有的记忆，然后发送到地球上寄居在那些生物的躯体中。</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <h3>酉阳餐厨</h3>
+                <p>一个现在-成为者将无法逃脱牢笼，因为他们无法回忆起自己是谁，曾来自何方，以及现在的处境。除了他们自己真实的经历之外，早已经被催眠去认为他们是某个人，在某件事中，某个时候和某个地方。因此，在这整个一大片的太空区域，地球已经变成了一个通用的倾倒垃圾的场所。地球本身是一个高度不稳定的行星。</p>
+              </a>
+          </li>
+        </div>
+        </div>
+
+
+        <div class="m-fourth">
+          <div class="fourtop">
+            <div id="four1" onclick="window.open('https://baike.baidu.com/item/%E9%85%89%E5%B7%9E/12815400?fr=aladdin')">
+              <span>景区简介</span>
+              
+              <img src="./image/old/yyz.jpg" alt="">
+              <span>酉州及酉州府，《禹贡》为梁州之域。春秋战国时期，今重庆市酉阳地域属楚。秦时隶属黔中郡。</span>
+            </div>
+            <div id="four1" onclick="window.open('https://baike.baidu.com/item/%E9%85%89%E5%B7%9E/12815400?fr=aladdin')">
+              <span>景区导览</span>
+              <img src="./image/old/gc.jpg" alt="">
+              <span>缓缓拉开这惟妙惟肖的画卷，脉脉青山，潺潺流水，云卷云舒，倒影水中，水天相一；特色民族建筑，田园村落，依稀可见</span>
+            </div>
+            <div id="four1" onclick="window.open('http://www.zgyythy.com/aspx/pc/thyfg.aspx')">
+              <span>景区风光</span>
+              <img src="./image/old/thy.jpg" alt="">
+              <span>世外桃源有入迷津、秦乐坊、廋辞亭、归园田居、忘归廊、陶公学堂、躬耕园、桃汁坊、秦趣苑、桃源茶坊、麻布记忆等秦晋生活。</span>
+            </div>
+            <div id="four1" onclick="window.open('https://baike.baidu.com/item/%E5%9C%9F%E5%AE%B6%E6%97%8F/130719?fr=aladdin')">
+              <span>民族风情</span>
+              <img src="./image/old/mzgirl.jpg" alt="">
+              <span>苗族与土家族，是两个古老的民族,属汉藏语系藏缅语族。</span>
+            </div>
+          </div>
+          <div class="fourbottom">
+            <div id="four1" onclick="window.open('https://baike.baidu.com/item/%E9%BE%9A%E6%BB%A9%E5%8F%A4%E9%95%87/2394357?fr=aladdin')">
+              <span>龚滩古镇</span>
+              <img src="./image/old/gtgz.jpg" alt="">
+              <span>龚滩古镇是中国历史文化名镇、重庆市第一历史文化名镇、国家AAAA级景区，重庆著名旅游胜地。</span>
+            </div>
+            <div id="four1" onclick="window.open('https://baike.baidu.com/item/%E8%B5%B5%E4%B8%96%E7%82%8E%E6%95%85%E5%B1%85')">
+              <span>烈士故居</span>
+              <img src="./image/old/gj.jpg" alt="">
+              <span>赵世炎烈士故居伫立在酉阳。</span>
+            </div>
+            <div id="four2" onclick="window.open('https://baike.baidu.com/item/%E8%B5%B5%E4%B8%96%E7%82%8E/51205')">
+              <span>名人游览</span>
+              <img src="./image/old/zsy.jpg" alt="">
+              <span>赵世炎（1901年4月13日—1927年7月19日），字琴生，号国富，笔名施英，重庆市酉阳土家族苗族自治县人。</span>
+            </div>
+            <div id="four1" onclick="window.open('https://baike.baidu.com/item/%E9%85%89%E9%98%B3%E5%8F%A0%E7%9F%B3%E8%8A%B1%E8%B0%B7%E6%99%AF%E5%8C%BA?fromtitle=%E5%8F%A0%E7%9F%B3%E8%8A%B1%E8%B0%B7&fromid=59378713')">
+              <span>叠石花谷</span>
+              <img src="./image/index/dshg.jpg" alt="">
+              <span>酉阳叠石花谷景区是一个集旅游、观光、休闲为一体的生态园扶贫示范景区,分为叠石花谷区和艺术部落两大部分。</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="m-fifth">
+          <div class="bgbg">
+            <div id="container"></div>
+          </div>
+          
+        </div>
+
+
+        <div class="m-sixth">
+          <div class="item" info="彩虹边框">
+            <div></div>
+          </div>
+
+          <div class="six_first">
+            <div class="yuan"></div>
+            <span class="six_title">景区特色</span>
+          </div>
+          <div class="six_first_show">
+            <div class="slides">
+              <li class="slide">
+                <div class="six_intro">农家小院</div>
+              </li>
+              <li class="slide">
+                <div class="six_intro">幽静小村</div>
+              </li>
+              <li class="slide">
+                <div class="six_intro">茗品茶香</div>
+              </li>
+              <li class="slide">
+                <div class="six_intro">古色天香</div>
+              </li>
+              <li class="slide">
+                <div class="six_intro">燕南梅苑</div>
+              </li>
+            </div>
+          </div>
+          <!--  -->
+          <div class="six_first yuan1">
+            <div class="yuan"></div>
+            <span class="six_title">静心民宿</span>
+          </div>
+          <div class="six_sec">
+            <div class="six_sec_cc">
+              <img src="./image/six/6.jpg" alt="">
+              <div class="six_c1">
+                静心民宿一
+              </div>
+              <div class="six_c2">
+                被柳树环抱的农家小院更使人如醉如痴。
+              </div>
+              <div class="six_c2">夕阳余晕透过层层枝叶撒在这红砖青瓦</div>
+              <div class="six_c2">的房舍上,给它抹上一层黄灿灿的颜色,烟</div>
+              <div class="six_c2">囱冒出缕缕炊烟。几只燕子在空中掠过</div>
+              <div class="six_c2">白白的屋顶,无暇的地面,没有一丝尘埃。</div>
+            </div>
+            <div class="six_sec_cc">
+              <img src="./image/six/8.jpg" alt="">
+              <div class="six_c1">
+                静心民宿二
+              </div>
+              <div class="six_c2">
+                被柳树环抱的农家小院更使人如醉如痴。
+              </div>
+              <div class="six_c2">夕阳余晕透过层层枝叶撒在这红砖青瓦</div>
+              <div class="six_c2">的房舍上,给它抹上一层黄灿灿的颜色,烟</div>
+              <div class="six_c2">囱冒出缕缕炊烟。几只燕子在空中掠过</div>
+              <div class="six_c2">白白的屋顶,无暇的地面,没有一丝尘埃。</div>
+            </div>
+            <div class="six_sec_cc">
+              <img src="./image/six/7.jpg" alt="">
+              <div class="six_c1">
+                静心民宿三
+              </div>
+              <div class="six_c2">
+                被柳树环抱的农家小院更使人如醉如痴。
+              </div>
+              <div class="six_c2">夕阳余晕透过层层枝叶撒在这红砖青瓦</div>
+              <div class="six_c2">的房舍上,给它抹上一层黄灿灿的颜色,烟</div>
+              <div class="six_c2">囱冒出缕缕炊烟。几只燕子在空中掠过</div>
+              <div class="six_c2">白白的屋顶,无暇的地面,没有一丝尘埃。</div>
+            </div>
+            
+          </div>
+          <!--  -->
+          <div class="six_first yuan1">
+            <div class="yuan"></div>
+            <span class="six_title">最新动态</span>
+          </div>
+          <div class="six_third">
+            <div class="six_third_c">
+              <div class="c_shadow">
+                <div class="c_shadow1 c_margin">阳朔夏棠寨度...</div>
+                <div class="c_shadow1 c_six">2022-6-1</div>
+                <div class="c_shadow1 c_sixs">离我们不远的地方</div>
+                <div class="c_shadow1 c_sixs">有个闻名天下的小</div>
+                <div class="c_shadow1 c_sixs">域，那里有四季如春</div>
+                <div class="c_shadow1 c_sixs">的山水美景。</div>
+              </div>
+            </div>
+            <div class="six_third_c">
+              <div class="c_shadow">
+                <div class="c_shadow1 c_margin">酉阳的那些年...</div>
+                <div class="c_shadow1 c_six">2022-6-1</div>
+                <div class="c_shadow1 c_sixs">离我们不远的地方</div>
+                <div class="c_shadow1 c_sixs">有个闻名天下的小</div>
+                <div class="c_shadow1 c_sixs">域，那里有四季如春</div>
+                <div class="c_shadow1 c_sixs">的山水美景。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="six_first yuan1 yuan0">
+            <div class="yuan"></div>
+            <span class="six_title">赏心体验</span>
+          </div>
+          <div class="six_four">
+            <div class="animation">
+              <div class="text">
+                <img src="./image/six/11.jpg" alt=""/>
+                <img src="./image/six/12.jpg" alt=""/>
+                <img src="./image/six/13.jpg" alt=""/>
+                <img src="./image/index1/pro6.jpg" alt=""/>
+                <img src="./image/index1/pro5.jpg" alt=""/>
+                <img src="./image/index1/pro2.jpg" alt=""/>
+                <img src="./image/index1/pro3.jpg" alt=""/>
+              </div>
+            </div>
+        
+          </div>
+
+
+          <div class="six_first yuan0">
+            <div class="yuan"></div>
+            <span class="six_title">酉阳宣传</span>
+          </div>
+          
+          <div class="videoContent">
+            <video class="videoElement" src="./media/酉阳桃花源.mp4" controls="controls"  width="100%"></video>
+          </div>
+          
+          </div>
+
+         
+        </div>
+
+        
+      </div>
+      
+    <script src="./js/index.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/myMap.js"></script>
+    <script src="./js/log.js"></script>
+    <script src="./js/menucss.js"></script>
+    <script src="./js/herf.js"></script>
+  </body>
+</html>
+
